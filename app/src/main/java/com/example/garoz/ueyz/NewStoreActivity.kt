@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import kotlinx.android.synthetic.main.activity_new_store.*
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.garoz.ueyz.R.id.newName
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices

@@ -11,12 +11,8 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_main.*
-import android.widget.ArrayAdapter
-import android.widget.Spinner
 
-
-
-
+import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -40,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 .addOnCompleteListener(OnCompleteListener<QuerySnapshot> { task ->
                     if (task.isSuccessful) {
                         //recorre todos los documentos y verifica si uno tiene la informacion que se necesita
-                        for (document in task.result) {
+                        for (document in task.result!!) {
                             var correctUser=document["name"].toString()
                             var correctPassword=document["pasword"].toString()
                             if (currentUserName.equals(correctUser) && correctPassword.equals(currentPassword)){
